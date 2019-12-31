@@ -263,7 +263,7 @@ class Post(object):
             else:
                 _tag_list = self.meta[lang]['tags'].split(',')
             self._tags[lang] = natsort.natsorted(
-                list(set([x.strip() for x in _tag_list])),
+                list({x.strip() for x in _tag_list}),  # unique items
                 alg=natsort.ns.F | natsort.ns.IC)
             self._tags[lang] = [t for t in self._tags[lang] if t]
 

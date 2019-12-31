@@ -75,7 +75,11 @@ class ScanPosts(PostScanner):
                 # also remove from translated paths that are translations of
                 # paths in untranslated_list, so x.es.rst is not in the untranslated set
                 for p in untranslated:
-                    translated = translated - set([utils.get_translation_candidate(self.site.config, p, l) for l in self.site.config['TRANSLATIONS'].keys()])
+                    translation_candidates = {
+                        utils.get_translation_candidate(self.site.config, p, l)
+                        for l in self.site.config['TRANSLATIONS'].keys()
+                    }
+                    translated = translated - translation_candidates
 
                 full_list = list(translated) + list(untranslated)
                 # We eliminate from the list the files inside any .ipynb folder
