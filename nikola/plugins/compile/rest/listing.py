@@ -203,4 +203,3 @@ class Listing(Include):
 
         Listing has no content, override check from superclass.
         """
-        pass

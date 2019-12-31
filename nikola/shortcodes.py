@@ -35,8 +35,6 @@ from .utils import LOGGER
 class ParsingError(Exception):
     """Used for forwarding parsing error messages to apply_shortcodes."""
 
-    pass
-
 
 def _format_position(data, pos):
     """Return position formatted as line/column.

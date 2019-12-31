@@ -865,8 +865,6 @@ def encodelink(iri):
 class UnsafeZipException(Exception):
     """Exception for unsafe zip files."""
 
-    pass
-
 
 def extract_all(zipfile, path='themes'):
     """Extract all files from a zip file."""

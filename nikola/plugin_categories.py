@@ -533,7 +533,6 @@ class Importer(Command):
 
     def preprocess_data(self):
         """Modify data if needed."""
-        pass
 
     def parse_data(self):
         """Convert self.data into self.items."""
@@ -541,7 +540,6 @@ class Importer(Command):
 
     def filter_data(self):
         """Remove data that's not to be imported."""
-        pass
 
     def process_data(self):
         """Go through self.items and save them."""
@@ -744,7 +742,6 @@ class Taxonomy(BasePlugin):
         The posts will be ordered by date (latest first) before calling
         this function. This function must sort in-place.
         """
-        pass
 
     def sort_classifications(self, classifications: 'typing.List[str]', lang: str, level=None):
         """Sort the given list of classification strings.
@@ -757,7 +754,6 @@ class Taxonomy(BasePlugin):
         path element of the path returned by `extract_hierarchy()`. The index
         of the path element in the path will be provided in `level`.
         """
-        pass
 
     def get_classification_friendly_name(self, classification: str, lang: str, only_last_component=False) -> str:
         """Extract a friendly name from the classification.
@@ -880,7 +876,6 @@ class Taxonomy(BasePlugin):
         `hierarchy_lookup_per_lang` is the corresponding hierarchy lookup mapping
         classification strings to `hierarchy_utils.TreeNode` objects.
         """
-        pass
 
     def get_other_language_variants(self, classification: str, lang: str, classifications_per_language: 'typing.List[str]') -> 'typing.List[str]':
         """Return a list of variants of the same classification in other languages.
