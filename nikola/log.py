@@ -42,8 +42,6 @@ __all__ = (
 class ApplicationWarning(Exception):
     """An application warning, raised in strict mode."""
 
-    pass
-
 
 class StrictModeExceptionHandler(logging.StreamHandler):
     """A logging handler that raises an exception on warnings."""
