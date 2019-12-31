@@ -105,7 +105,7 @@ class RenderPosts(Task):
                 # Apply filters specified in the metadata
                 ff = [x.strip() for x in post.meta('filters', lang).split(',')]
                 flist = []
-                for i, f in enumerate(ff):
+                for f in ff:
                     if not f:
                         continue
                     _f = self.site.filters.get(f)
