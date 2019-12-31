@@ -563,7 +563,7 @@ class config_changed(tools.config_changed):
         last_success = values.get(self.identifier)
         if last_success is None:
             return False
-        return (last_success == self._calc_digest())
+        return last_success == self._calc_digest()
 
     def __repr__(self):
         """Provide a representation of config_changed."""
@@ -704,10 +704,10 @@ def load_messages(themes, translations, default_lang, themes_dirs):
                 for k, v in translation.MESSAGES.items():
                     if v:
                         messages[lang][k] = v
-                del(translation)
+                del translation
             except ImportError as orig:
                 last_exception = orig
-        del(english)
+        del english
         sys.path = oldpath
 
     if not all(found.values()):
@@ -1885,7 +1885,7 @@ def indent(text, prefix, predicate=None):
 
     def prefixed_lines():
         for line in text.splitlines(True):
-            yield (prefix + line if predicate(line) else line)
+            yield prefix + line if predicate(line) else line
     return ''.join(prefixed_lines())
 
 
