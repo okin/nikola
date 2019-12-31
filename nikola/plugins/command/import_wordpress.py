@@ -892,8 +892,6 @@ to
         try:
             if isinstance(path, utils.bytes_str):
                 path = path.decode('utf8', 'replace')
-            else:
-                path = path
         except AttributeError:
             pass
 
