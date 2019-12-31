@@ -135,7 +135,7 @@ def req_missing(names, purpose, python=True, optional=False):
     to the user.
 
     """
-    if not (isinstance(names, tuple) or isinstance(names, list) or isinstance(names, set)):
+    if not isinstance(names, (tuple, list, set)):
         names = (names,)
     if not names:
         return False
