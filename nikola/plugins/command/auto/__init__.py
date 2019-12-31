@@ -166,10 +166,8 @@ class CommandAuto(Command):
         watched.add(pkg_resources.resource_filename('nikola', ''))
 
         out_folder = self.site.config['OUTPUT_FOLDER']
-        if options and options.get('browser'):
-            browser = True
-        else:
-            browser = False
+
+        browser = bool(options.get('browser'))
 
         if options['ipv6']:
             dhost = '::'

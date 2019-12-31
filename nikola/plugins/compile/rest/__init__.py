@@ -159,10 +159,8 @@ class CompileRest(PageCompiler):
             else:
                 post._depfile[dest] += deps.list
                 post._depfile[dest] += shortcode_deps
-        if error_level < 3:
-            return True
-        else:
-            return False
+
+        return error_level < 3
 
     def create_post(self, path, **kw):
         """Create a new post."""
