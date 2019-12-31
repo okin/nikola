@@ -40,7 +40,7 @@ from nikola import utils
 EXIF_TAG_NAMES = {}
 
 
-class ImageProcessor(object):
+class ImageProcessor:
     """Apply image operations."""
 
     image_ext_list_builtin = ['.jpg', '.png', '.jpeg', '.gif', '.svg', '.svgz', '.bmp', '.tiff']
