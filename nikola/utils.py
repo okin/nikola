@@ -1688,7 +1688,7 @@ def os_path_split(path):
             result.insert(0, path)
             break
         result.insert(0, tail)
-        if len(path) == 0:
+        if not path:
             break
     return result
 
